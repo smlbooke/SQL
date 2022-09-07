@@ -1,0 +1,39 @@
+CREATE TABLE candy (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, aisle INTEGER, category TEXT);
+
+INSERT INTO candy
+VALUES (1, 'mms', 2, 1, 'chocolate');
+INSERT INTO candy
+VALUES (2, 'kitkat', 3, 2, 'chocolate');
+INSERT INTO candy
+VALUES (3, 'reeces', 3, 3, 'chocolate');
+INSERT INTO candy 
+VALUES (4, 'cowtails', 1, 4, 'chocolate');
+INSERT INTO candy 
+VALUES (5, 'musketeers', 2, 5, 'chocolate');
+INSERT INTO candy
+VALUES (6, 'peachy rings', 1, 1, 'fruity');
+INSERT INTO candy
+VALUES (7, 'hichews', 2, 2, 'fruity');
+INSERT INTO candy 
+VALUES (8, 'starbursts', 2, 3, 'fruity');
+INSERT INTO candy
+VALUES (9, 'sour straws', 4, 4, 'fruity');
+INSERT INTO candy
+VALUES (10, 'airheads', 4, 5, 'fruity');
+INSERT INTO candy
+VALUES (11, 'mentos', 1, 1, 'minty');
+INSERT INTO candy
+VALUES (12, '5 gum', 2, 2, 'minty');
+INSERT INTO candy 
+VALUES (13, 'orbit', 2, 3, 'minty');
+INSERT INTO candy 
+VALUES (14, 'icebreakers', 3, 4, 'minty');
+INSERT INTO candy 
+VALUES (15, 'wintergreen', 2, 5, 'minty');
+
+
+-Display the database order by price
+SELECT * FROM candy ORDER BY price;
+
+-What is the price of all candy options together?
+SELECT SUM(price) FROM candy 
