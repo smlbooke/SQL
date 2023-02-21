@@ -15,3 +15,5 @@ WHEN HP BETWEEN 149 AND 40 THEN 'The HP is average'
 ELSE 'The HP is low'
 END AS HPText
 FROM pokemon ORDER BY HP DESC;
+SELECT Name FROM pokemon WHERE Type_1 = 'Fire' AND Type_2 = 'Fighting';
+SELECT Name, Attack, Defense FROM pokemon WHERE Attack > 150 OR Defense > 200;
