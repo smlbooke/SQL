@@ -1,19 +1,28 @@
+//Select only 5 rows//
 SELECT * FROM pokemon LIMIT 5;
 
+//Select pokemon and average HP for each//
 SELECT Name, AVG(HP) AS avg_HP FROM pokemon;
 
+//Select pokemon and maximum attack for each//
 SELECT Name, MAX(ATTACK) AS max_ATTACK FROM pokemon;
 
+//Select pokemon where type equals poison//
 SELECT Name, MIN(Defense) FROM pokemon WHERE type_1 OR type_2 = 'Poison';
 
+//Select pokemon where total value is over 400, speed is over 40, group by type 1//
 SELECT Name,Type_1, Speed FROM pokemon WHERE Total>400 GROUP BY Type_1 HAVING Speed > 80;
 
+//Select pokemon having an average total of over 450, group by type//
 SELECT Name, Type_1, AVG(Total) FROM pokemon GROUP BY Type_1 HAVING AVG(Total)>450;
 
+//Select pokemon and maximum HP for each//
 SELECT Name, MAX(HP) FROM pokemon;
 
+//Select pokemon and minimum HP for each//
 SELECT Name, MIN(HP) from pokemon;
 
+//Select pokemon and HP, labeling HP as 'High', 'Average', or 'Low'. Order from highest to lowest HP//
 SELECT NAME, HP, CASE 
 WHEN HP >= 150 THEN 'The HP is high'
 WHEN HP BETWEEN 149 AND 40 THEN 'The HP is average'
@@ -21,6 +30,8 @@ ELSE 'The HP is low'
 END AS HPText
 FROM pokemon ORDER BY HP DESC;
 
+//Select pokemon where Type 1 equals 'Fire' and Type 2 equals 'Fighting'//
 SELECT Name FROM pokemon WHERE Type_1 = 'Fire' AND Type_2 = 'Fighting';
 
+//Select pokemon where attack is greater than 150 or defense is greater than 200//
 SELECT Name, Attack, Defense FROM pokemon WHERE Attack > 150 OR Defense > 200;
